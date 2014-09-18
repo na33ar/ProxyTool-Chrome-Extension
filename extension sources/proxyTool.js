@@ -28,9 +28,15 @@ formatProxy = function (stringProxy) {
 };
 
 saveProxyStateToStorage = function () {
+   // var currentProxy = chrome.proxy;
+};
+
+enableProxy = function () {
 
 };
 
-getProxyStateFromStorage = function () {
-
+disableProxy = function () {
+    chrome.proxy.settings.set(
+    { value: { "mode": "direct" }, scope: 'regular' },
+    function () { });
 };
